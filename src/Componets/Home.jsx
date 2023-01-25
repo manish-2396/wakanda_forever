@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import GetData from "./GetData";
+import InputText from "./InputText";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <Box>
+      <InputText />
+      <GetData />
+    </Box>
+  );
+};
 
-export default Home
+const Box = styled.div`
+  margin-top: 2rem;
+`;
+
+export default Home;

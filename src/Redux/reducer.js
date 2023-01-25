@@ -1,26 +1,34 @@
 import * as types from "./actionType";
 
 const initialState = {
-  TextValue: [],
+  loading: false,
+  error: false,
+  data: [],
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.POST_REQUEST: {
       return {
-        TextValue: [],
+        loading: true,
+        error: false,
+        data: [],
       };
     }
 
     case types.POST_SUCCESS: {
       return {
-        TextValue: payload,
+        loading: false,
+        error: false,
+        data: payload,
       };
     }
 
     case types.POST_FAILURE: {
       return {
-        TextValue: [],
+        loading: false,
+        error: true,
+        data: [],
       };
     }
 
