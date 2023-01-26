@@ -3,6 +3,7 @@ import * as types from "./actionType";
 let TextArray = [];
 
 export const postText = (payload) => (dispatch) => {
+  dispatch({ type: types.POST_REQUEST });
   new Promise((res, err) => {
     if (payload) {
       TextArray = [...TextArray, payload];
